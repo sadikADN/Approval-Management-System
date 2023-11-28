@@ -41,6 +41,12 @@ public class DashboardPage extends BaseAMC {
     @FindBy(xpath = "//span[contains(text(),'Add Suppliers')]")
     WebElement addSuppliers;
 
+    @FindBy(xpath = "//span[contains(text(),'Non RM')]")
+    WebElement nonRM;
+
+    @FindBy(xpath = "/html/body/app-root/app-body/div/app-sidenav/div/div[2]/ul/li[4]/div/app-sublevel-menu/ul/li[2]/div/app-sublevel-menu/ul/li[1]/a/span")
+    WebElement createNonRMRequest;
+
     public DashboardPage expandMenu() throws InterruptedException {
         expandMenu.isDisplayed();
         expandMenu.click();
@@ -114,4 +120,18 @@ public class DashboardPage extends BaseAMC {
         return new AddSupplierPage();
 
     }*/
+
+    public DashboardPage getNonRM() {
+        nonRM.isDisplayed();
+        nonRM.click();
+        return this;
+    }
+
+    public NonRMRequestPage getCreateNonRMRequest() {
+        createNonRMRequest.isDisplayed();
+        createNonRMRequest.click();
+        return new NonRMRequestPage();
+    }
+
+
 }

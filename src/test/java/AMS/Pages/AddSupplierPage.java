@@ -2,6 +2,7 @@ package AMS.Pages;
 
 import AMS.BaseAMC;
 import AMS.Util.CommonMethod;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,7 +15,6 @@ public class AddSupplierPage extends BaseAMC {
     public AddSupplierPage(){
         PageFactory.initElements(driver, this);
     }
-
     @FindBy(xpath = "//h3[contains(text(),'Supplier Onboarding')]")
     WebElement supplierOnboarding;
 

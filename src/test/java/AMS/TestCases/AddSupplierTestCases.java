@@ -30,12 +30,11 @@ public class AddSupplierTestCases extends BaseAMC {
                 .getAddSuppliers();
 
 //        Assert.assertTrue(supplierListPage.isnewPage());
-        /*AddSupplierPage addSupplierPage = new SupplierListPage()
-                .getNewBtn();*/
+        AddSupplierPage addSupplierPage = new SupplierListPage()
+                .getNewBtn();
 
 //        Assert.assertTrue(addSupplierPage.isSupplierOnboarding());
-        AddSupplierPage addSupplierPage1 = new SupplierListPage()
-                .getNewBtn()
+        AddSupplierPage addSupplierPage1 = new AddSupplierPage()
                 .getSelectSBU()
                 .getSelectSBUValue()
                 .getRequestorName(LoremIpsum.getInstance().getNameMale())
@@ -81,6 +80,7 @@ public class AddSupplierTestCases extends BaseAMC {
                 .getBondLicenseFile()
                 .getSaveBtn()
                 .getSubmitBtn();
+
 //        Assert.assertTrue(addSupplierPage1.isSuccessMsgDisplayed());
 
 
